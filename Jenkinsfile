@@ -5,7 +5,7 @@ pipeline {
     stage('Build & Test in Docker') {
       steps { 
         script {
-          def img = docker.image('python3.9')
+          def img = docker.image('python:3.9')
           img.pull()
           img.inside('-u root:root') {
             checkout scm
