@@ -11,7 +11,7 @@ pipeline {
             checkout scm
             sh 'pip install pyflakes pytest'
             sh 'pytest *.py'
-            sh 'pytest --maxfail=1 --disable-waringngs -q'
+            sh 'pytest --maxfail=1 --disable-warnings -q'
           }
         }
       }
